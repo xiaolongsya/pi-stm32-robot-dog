@@ -46,3 +46,28 @@ Thumbs.db
 # ====================
 .vscode/
 .idea/
+
+# ====================
+# AI 协作文档 / 记忆(2026-09-02 加)
+# 这些不是项目产物,只本地用
+# ====================
+CLAUDE.md
+KICKOFF_PROMPT.md
+
+# AI 记忆目录(通常在 ~/.claude/,本来就不在项目里,但保险起见)
+.claude/
+.ai-memory/
+memory/
+
+# 测试 / 调试(项目代码有再加)
+test/
+tests/
+*.test
+*.spec
+__tests__/
+
+# 临时数据
+*.log
+*.tmp
+data/tmp/
+scratch.*
