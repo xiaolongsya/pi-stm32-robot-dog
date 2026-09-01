@@ -1,0 +1,103 @@
+# desktop-quadruped
+
+> A 4-legged robot dog for your desk: Pi Zero3 + STM32G431, 8-servo direct drive,
+> fully open-source hardware (KiCad schematic + 80×80 PCB + Gerbers) and firmware.
+
+![Status](https://img.shields.io/badge/status-v3%20schematic%20complete-green)
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Hardware](https://img.shields.io/badge/hardware-open--source-orange)
+
+---
+
+## ✨ Features
+
+- **Dual MCU architecture**: Pi Zero3 (Linux, vision/voice) + STM32G431KBT6 (real-time gait)
+- **8-servo direct drive**: MG90S × 8 (no PCA9685) on STM32 timers
+- **Compact PCB**: 4-layer, 80×80mm (JLC free-coupon sized)
+- **Standalone power**: 2× LM2596 + AMS1117, separate logic & servo rails
+- **Sensor stack**: MPU6050 IMU + SSD1306 OLED + HC-SR04 ultrasonic + battery monitor + buzzer
+- **Local gait**: STM32 handles balance & stepping, Pi just sends high-level commands
+- **Open-source friendly**: MIT license, KiCad files, gerbers, BOM, STM32 firmware all public
+
+## 📐 Architecture
+
+```
+┌──────────────────────────────────┐
+│ Pi Zero3 (vision/voice master)  │
+│ ├─ USB camera (object detection) │
+│ ├─ USB microphone (wake word)    │
+│ └─ UART → STM32 (high-level cmds) │
+└────────────┬─────────────────────┘
+             │ 115200 baud
+┌────────────┴─────────────────────┐
+│ STM32G431 (real-time control)     │
+│ ├─ 8× MG90S servos (PA2~PA7 + PB0 + PB3) │
+│ ├─ MPU6050 IMU (1000Hz balance)     │
+│ ├─ HC-SR04 ultrasonic (PB4/PB5)     │
+│ ├─ SSD1306 OLED display (I2C)       │
+│ ├─ Battery monitor (PA8 ADC)        │
+│ └─ Buzzer (PA11 PWM)                │
+└──────────────────────────────────┘
+```
+
+## 🛠️ Hardware
+
+| Module | Components | Cost |
+|---|---|---|
+| MCU | STM32G431KBT6 (LQFP-32, 0.8mm pitch) + Pi Zero3 | ¥15 |
+| Power | 2× LM2596 TO-263-5 + 33µH inductors + 1N5825 diodes + AMS1117 | ¥12 |
+| I2C bus | MPU6050 + SSD1306 OLED + 2× 4.7kΩ pull-up | ¥8 |
+| Servos | 8× MG90S + 2× 12-pin headers (H5/H6) | ¥80 |
+| Battery | 2S 18650 6800mAh (蓝火新能源) + XT30 pigtail | ¥5 |
+| Sensors | HC-SR04 + buzzer + battery monitor (R15/R16) | ¥5 |
+| Switch | Ship-type SW1 + 3.3V bus capacitors | ¥1 |
+| Connectors | USB-C (debug), J1/J2 (debug), CN2 (Pi power), OLED | ¥2 |
+| **Total** | **52 components** | **~¥127** |
+
+## 📐 PCB
+
+- **Size**: 80×80 mm
+- **Layers**: 4 (signal + GND + power + signal)
+- **Mounting**: 4× M3 screws at corners (72.16×70.16mm spacing)
+- **Tool**: Designed for JLCPCB fabrication
+
+## 📚 Documentation
+
+- [`CLAUDE.md`](CLAUDE.md) — AI collaboration rules, PCB workflow, technical guidelines
+- [`KICKOFF_PROMPT.md`](KICKOFF_PROMPT.md) — Prompt for starting new Claude sessions
+- [`网表/`](网表/) — KiCad-style netlists
+- [`数据手册/`](数据手册/) — IC datasheets
+
+## 🚀 Quick Start
+
+1. Clone this repo
+2. Open `网表/Netlist_控制板_2026-09-01.tel` in your EDA tool (KiCad / Lceda)
+3. Generate Gerbers and order PCB from JLC
+4. Source components per BOM
+5. Solder (recommended order: power → MCU → sensors → connectors)
+6. Flash STM32 firmware
+7. Connect Pi via UART, run agent
+
+## 🤝 Contributing
+
+PRs welcome! See [`CLAUDE.md`](CLAUDE.md) for project rules and conventions.
+
+## 📄 License
+
+This project is licensed under the **MIT License** — see [`LICENSE`](LICENSE).
+
+## 🙏 Acknowledgments
+
+- love-bot v2 project — prior art and many lessons learned (see `../love-bot项目/`)
+- STM32 / MPU6050 / SSD1306 / LM2596 datasheets and reference designs
+- Open-source community
+
+## 📊 Project Status
+
+| Phase | Status |
+|---|---|
+| v3 Schematic | ✅ Complete (52 components) |
+| v3 PCB Layout | ⏳ In progress |
+| v3 Fabrication | ⏳ Pending |
+| STM32 Firmware | ⏳ Pending |
+| Pi Agent Software | ⏳ Pending |
