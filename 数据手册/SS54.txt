@@ -1,0 +1,191 @@
+SS52 THRU SS520
+
+SURFACE MOUNT SCHOTTKY BARRIER RECTIFIER
+
+         SMA Surface Mount Schottky Barrier Rectifier
+
+  Features                                                                                           Reverse Voltage
+                                                                                                           20-200 V
+·Low profile package
+·Ideal for automated placement                                                                       Forward Current
+·Guardring for overvoltage protection                                                                     5 Ampere
+·Low power losses, high efficiency
+·Meets MSL level 1, per J-STD-020, LF maximum peak of 260
+
+  Applications                                                                                              DO-214AC(SMA)
+
+   These Schottky barrier diodes are designed for high speed switching
+   applications, circuit protection, and voltage clamping.
+
+  Mechanical Data
+
+·Case: DO-214AC(SMA)
+   Molding compound meets UL 94V-0 flammability rating, RoHS-compliant,
+   halogen-free
+
+·Terminals: Solder plated, solderable per MIL-STD-750,Method 2026
+·Polarity: Cathode line denotes the cathode end
+
+   Function Diagram
+
+                                               XX
+
+Maximum Ratings (Ta=25 Unless otherwise specified)
+
+         PARAMETER                             SYMBOL UNIT SS52 SS53 SS54 SS55 SS56 SS58 SS510 SS515 SS520
+
+         Device marking code                                SS52 SS53 SS54 SS55 SS56 SS58 SS510 SS515 SS520
+
+Maximum Repetitive Peak Reverse Voltage        VRRM    V    20  30       40                 50  60          80  100 150 200
+
+         Maximum RMS Voltage                   VRMS    V    14  21       28                 35  42          56  70  105 140
+
+         Maximum DC blocking Voltage           VDC     V    20  30       40                 50  60          80  100 150 200
+
+Maximum Average Forward Rectified Current @    IF(AV)  A                                        5.0
+    60Hz sinewave, Resistance load,TL (Fig.1)
+
+Non-repetitive Peak Forward Surge Current      IFSM    A                                        120
+            @ t=8.3ms Half-sine wave
+
+         Storage temperature                   Tstg                                             -55 ~ +150
+
+         Junction temperature                      Tj               -55 ~ +125                                  -55 ~ +150
+
+                                               RJ-A     /W                                      60
+                                               RJ-L
+         Typical Thermal Resistance
+
+                                                        /W                                      22
+
+Rev:2.0                                            Zhuhai Hongjiacheng Technology co., Ltd                                  1 of 3
+SS52 THRU SS520
+
+SURFACE MOUNT SCHOTTKY BARRIER RECTIFIER
+
+  Electrical Characteristics (Ta=25 Unless otherwise noted)
+
+                                    PARAMETER                  TEST CONDITIONS SYMBOL UNIT SS52             SS53                                  SS54  SS55 SS56   SS58 SS510 SS515 SS520
+                                                                                                            0.55                                              0.70
+Maximum instantaneous                                               IF=5.0A            VF                V                                         0.2                  0.85                 0.95
+      forward voltage                                                                                                                              10
+
+    Maximum DC reverse                                         VR=VDCTA=25             IR1                                                                                      0.05
+currentat rated DC blocking                                    VR=VDCTA=100                       mA
+                                                                                                                                                                                       5
+              voltage                                                                  IR2
+
+Typical junction capacitance 4.0V DC,1MHz                                              CJ           pF                                                      200
+
+Ratings And Characteristics Curves (Ta=25 Unless otherwise specified)
+
+                                    5.0                                                                                                      160
+
+                                                                                                                                                                        8.3msSingleHalfSineWave
+
+                                                                                                                                             140                        (JEDECMethod)
+
+AVERAGERECTIFIELDOUTPUTCURRENT(A)   4.0                                                                     PEAKFORWARDSURGECURRENT(A)
+
+                                                                                                                                             120
+
+                                    3.0                                                                                                      100
+
+                                                                                                                                             80
+
+                                    2.0                                                                                                      60
+
+                                                                                                                                             40
+
+                                    1.0
+
+                                                                                                                                             20
+
+                                    0    0       40                 80            120               160                                      0
+
+                                                                                                                                                  1                 10                                                                         100
+
+                                                               LEADTEMPERATURE()                                                                            NUMBEROFCYCLES
+
+                                            Fig.1 Forward Current Derating Curve                            Fig.2 Maximum Non-Repetitive Peak Forward Surge Current
+
+                                    100                                                                     INSTANTANEOUSREVERSECURRENT(mA)  100
+    INSTANTANEOUSFORWARDCURRENT(A)           Tj=25                                                                                                                                                                                 SS52-SS56
+                                             Pulsewidth=300us                                                                                                                                                                      SS58-SS520
+                                             1%DutyCycle
+                                                                                                                                              10
+                                     10
+
+                                                                                                                                             1.0                        Tj=100
+
+                                    1.0
+
+                                                                                                                                             0.1
+
+                                    0.1                                                SS52-SS54                                           0.01
+                                                                                       SS55-SS56
+                                   0.01                                                SS58-SS510                                                                       Tj=25
+                                         0                                             SS515-SS520
+
+                                            0.2  0.4           0.6      0.8       1.0  1.2          1.4     0.001                                       20  40          60      80                                                             100
+                                                                                                                   0
+
+                                                 INSTANTANEOUSFORWARDVOLTAGE(V)                                                                         PERCENTOFRATEDPEAKREVERSEVOLTAGE(%)
+
+                                                 Fig.3 Typical Forward Voltage                                                                       Fig.4 Typical Reverse Characteristics
+
+Rev:2.0                                                                                Zhuhai Hongjiacheng Technology co., Ltd                                                                                                                 2 of 3
+SS52 THRU SS520
+
+SURFACE MOUNT SCHOTTKY BARRIER RECTIFIER
+
+  Ordering Information
+
+PACKAGE     PACKAGE CODE UNIT WEIGHT(g)                       REEL(pcs)  BOX(pcs)  CARTON(pcs)             DELIVERY MODE
+   SMA                                                            5000     10000        80000                       11''
+   SMA         R2           0.07                                  7500     15000       120000                       13''
+
+               R3           0.07
+
+Package Outline Dimensions (SMA/DO-214AC)
+
+                                                                                            Dimensions
+
+                                                              Symbol        Millimeters                    Inches
+
+                                                                  A      Min.      Max.     Min.                   Max.
+                                                                  B
+                            AC                                    C
+                                                                  D
+                                                                  E      1.25      1.65     0.049                  0.065
+                                                                  F
+                                                                  G      3.95      4.65     0.156                  0.183
+                                                                  H
+                                  B                                      2.35      2.85     0.093                  0.112
+                                                           H
+                                                                         1.98      2.41     0.078                  0.095
+            D
+                                                                         0.76      1.52     0.030                  0.060
+
+                                                                         -         0.203                -          0.008
+
+            E            F                                               4.70      5.30     0.185                  0.209
+
+                   G                                                     0.15      0.31     0.006                  0.012
+
+Suggested Pad Layout
+
+                                                                                            Dimensions
+
+            J         K     J                                 Symbol        Millimeters                    Inches
+
+                                                                  M      Min.      Max.     Min.                   Max.
+                                                                  J
+         M                                                        K      1.70            -  0.067                  -
+
+                                                                         2.10            -  0.082                  -
+
+                                                                         -         2.30                 -          0.090
+
+Rev:2.0                     Zhuhai Hongjiacheng Technology co., Ltd                                                   3 of 3
+

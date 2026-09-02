@@ -3,7 +3,7 @@
 > A 4-legged robot dog for your desk: Pi Zero3 + STM32G431, 8-servo direct drive,
 > fully open-source hardware (KiCad schematic + 80×80 PCB + Gerbers) and firmware.
 
-![Status](https://img.shields.io/badge/status-v3%20schematic%20complete-green)
+![Status](https://img.shields.io/badge/status-v1%20schematic%20complete-green)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 ![Hardware](https://img.shields.io/badge/hardware-open--source-orange)
 
@@ -96,8 +96,24 @@ This project is licensed under the **MIT License** — see [`LICENSE`](LICENSE).
 
 | Phase | Status |
 |---|---|
-| v3 Schematic | ✅ Complete (52 components) |
-| v3 PCB Layout | ⏳ In progress |
-| v3 Fabrication | ⏳ Pending |
+| v1 Schematic | ✅ Complete (52 components) |
+| v1 PCB Layout | ✅ Complete (3 轮审查通过,0 阻断) |
+| v1 Fabrication | ⏳ Pending |
 | STM32 Firmware | ⏳ Pending |
 | Pi Agent Software | ⏳ Pending |
+
+---
+
+## 🔍 v1 PCB 投板前审查记录(2026-09-02)
+
+3 轮 ultracode 审查,找到并修复 4 个 critical + 1 个新发现的 critical:
+
+| # | 问题 | 修复 |
+|---|---|---|
+| C1 | SDA→PB6(无 I2C),SCL→PB7(只能 SDA)— I2C 跑不通 | SDA→PB7,SCL→PA15,R10/R11 改 4.7kΩ |
+| C2 | NRST/PA1 引脚反接 — 按 KEY1 复位,RESET1 无效 | 两网对调 |
+| C3 | C1/C2/RESET1/KEY1 4 个 pad 没接 GND | 全部接 GND |
+| C4 | F1 = SMD2920-500-24 = 5A/24V(确认) | 不动 |
+| **C5** | **LM2596 ON/OFF 拉到 BAT_PROTECT → 待机模式 → 整板不上电** | **删 R4/R14,U2.5/U10.5 直连 GND** |
+
+详见 [`机器狗v1控制板_投板前审查报告.md`](机器狗v1控制板_投板前审查报告.md)(本地项目文件,随仓库分发)。

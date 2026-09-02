@@ -1,0 +1,64 @@
+         
+
+                     SHENZHEN SHOUHAN TECHNOLOGYCO.,LTD
+
+                   Tel: 0755-27597601 Fax: 0755-27597491
+
+          
+SPECIFICATION FOR APPROVAL
+
+  Customer
+
+ Project
+
+ Part No    CYH74-33UH
+
+ Approval signatures
+
+ /Part No.   /Signatures
+
+             Date:
+
+/Drawn  
+/Check
+
+/Approved 
+1.Features
+
+  . High performance (Isat) realize by metal dust core.
+  . Low profile: Thickness max.2.05.0mm.
+  . Low loss and low resistance.
+  . Capable of corresponding high frequency 1MHz5MHz.
+   Ultra low buzz noise, due to composite construction.
+  . The products contain no lead and also support lead-free soldering.
+
+ 2.Applications area
+
+      Ideally used in NB/Desktop/server/Graphic card, LCD TV/Projector, etc as DC-DC Converter.
+
+ 3. Externl Dimensions (unit: mm)
+
+        A                B                                                            C               UNIT: mm
+                                                                                                      A:7.5(Max)
+                                                                                      D               B:4.5(Max)
+                                                                                                      C:2.7 ± 0.1
+                                                                                         E            D:2.0 ± 0.1
+                                                                                                      E:1.1 ± 0.1
+
+                 22.9*1.6
+
+4. Product Code
+
+CYH 74           330  M
+
+                                                                          TOLERANCE         Code      Tolerance 
+
+                                                     INDUCTANCE VALUE                              J          ±5%
+                       DIMENSIONS                                                                 K          ±10%
+                                                                                                   L         ±15%
+      SERIAL CODE                                                                                 M          ±20%
+                                                                                                  P          ±25%
+· Inductance Value                                                                                N          ±30%
+   (1R0:1.0uH; 100: 10uH; 101:100uH)
+Recommended reflow soldering curve
+

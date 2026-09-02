@@ -71,3 +71,7 @@ __tests__/
 *.tmp
 data/tmp/
 scratch.*
+
+# 审查临时目录(2026-09-02 加)
+_review_tmp/
+gerber_review/
