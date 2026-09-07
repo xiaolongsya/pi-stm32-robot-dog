@@ -98,9 +98,16 @@ This project is licensed under the **MIT License** — see [`LICENSE`](LICENSE).
 |---|---|
 | v1 Schematic | ✅ Complete (52 components) |
 | v1 PCB Layout | ✅ Complete (3 轮审查通过,0 阻断) |
-| v1 Fabrication | ⏳ Pending |
-| STM32 Firmware | ⏳ Pending |
+| v1 Fabrication | ✅ Complete |
+| v1 Board Bring-up | 🔧 In progress (新板子焊接中,旧板子调试损伤退役) |
+| STM32 Firmware | 🔧 I2C 扫描 + 8 路 PWM 来回测试通过,Pi UART 待接 |
 | Pi Agent Software | ⏳ Pending |
+
+### v1 板子当前状态(2026-09-07)
+
+- **旧板子退役**:调试过程中经历 LQFP-32 虚焊、ST-Link 反向供电、洗板未彻底烘干等问题,最后1A 短路烤了一阵子,内部可能已伤,用户决定重焊新板子
+- **新板子**:目视查脚 + 断电通断档 + 限流500mA 空载上电 + I2C 扫描验证——按这个 SOP 走,详情见 `machine-dog-v1-feedback.md`(AI 沉淀,本地记忆)
+- **固件进度**:`c:/Users/17402/Desktop/stm32项目/machine_dog_v1/Core/Src/main.c` 当前是 **8 路舵机来回测试** 版本(I2C 扫描也已验证)
 
 ---
 
