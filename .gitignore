@@ -75,3 +75,27 @@ scratch.*
 # 审查临时目录(2026-09-02 加)
 _review_tmp/
 gerber_review/
+
+# ====================
+# STM32 项目编译产物(2026-09-09 加)
+# STM32项目/ 是 CubeIDE 工程,只跟踪源码 + 配置,排除 Debug/ 编译产物
+# ====================
+**/Debug/
+**/*.o
+**/*.elf
+**/*.map
+**/*.list
+**/*.hex
+**/*.bin
+**/*.cyclo
+**/*.su
+**/*.d
+
+# CubeIDE 调试配置(打开工程时会重新生成)
+**/*.launch
+STM32项目/**/.settings/
+
+# CubeIDE 工程元数据(打开工程时会重新生成,不追踪)
+# STM32项目/**/.cproject
+# STM32项目/**/.project
+# STM32项目/**/*.mxproject
